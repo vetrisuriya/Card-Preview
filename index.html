@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	
+	<title>Frontend Mentor | 3-column preview card component</title>
+
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style>
+		.container {
+			width: 48%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.inner {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+		}
+		.inner .common__inner {
+			width: calc(100% / 3);
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			padding: 35px;
+			box-sizing: border-box;
+		}
+		.inner .inner1 {
+			background: #e28525;
+			border-top-left-radius: 8px;
+			border-bottom-left-radius: 8px;
+		}
+		.inner .inner2 {
+			background: #016972;
+		}
+		.inner .inner3 {
+			background: #00403f;
+			border-top-right-radius: 8px;
+    		border-bottom-right-radius: 8px;
+		}
+		.inner .inner1 .img, .inner .inner2 .img, .inner .inner3 .img {
+			height: 65px;
+		}
+		.inner .inner1 .title, .inner .inner2 .title, .inner .inner3 .title {
+			color: white;
+			font-size: 22px;
+			font-family: system-ui;
+			height: 50px;
+		}
+		.inner .inner1 .desc, .inner .inner2 .desc, .inner .inner3 .desc {
+			color: #ffffffbf;
+			font-size: 15px;
+			font-family: system-ui;
+			height: 160px;
+			line-height: 23px;
+		}
+		.inner .inner1 .button, .inner .inner2 .button, .inner .inner3 .button {
+			height: calc(100% - 275px);
+		}
+		.inner .inner1 .button button, .inner .inner2 .button button, .inner .inner3 .button button {
+			background: white;
+			border: unset;
+			padding: 13px 27px;
+			border-radius: 20px;
+			color: #e28525;
+			font-family: system-ui;
+    		font-weight: bold;
+			cursor: pointer;
+		}
+		.inner .inner2 .button button {
+			color: #016972;
+		}
+		.inner .inner3 .button button {
+			color: #00403f;
+		}
+
+		@media only screen and (max-width: 768px) {
+			.container {
+				width: 90%;
+				margin: 100px auto;
+				position: unset;
+				top: unset;
+				left: unset;
+				transform: unset;
+			}
+			.inner {
+				flex-direction: column;
+			}
+			.inner .common__inner {
+				width: 100%;
+				padding: 55px;
+			}
+			.inner .inner1 {
+				border-bottom-left-radius: unset;
+    			border-top-right-radius: 8px;
+			}
+			.inner .inner3 {
+				border-bottom-left-radius: 8px;
+    			border-top-right-radius: unset;
+			}
+		}
+	</style>
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="inner">
+			<div class="common__inner inner1">
+				<div class="img">
+					<img src="./images/icon-sedans.svg" alt="">
+				</div>
+				<div class="title">
+					SEDANS
+				</div>
+				<div class="desc">
+					Choose a sedan for its affordability and execellent fuel economy. Ideal for cruising in the city or on your next road trip.
+				</div>
+				<div class="button">
+					<button>Learn More</button>
+				</div>
+			</div>
+			<div class="common__inner inner2">
+				<div class="img">
+					<img src="./images/icon-suvs.svg" alt="">
+				</div>
+				<div class="title">
+					SUVS
+				</div>
+				<div class="desc">
+					Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.
+				</div>
+				<div class="button">
+					<button>Learn More</button>
+				</div>
+			</div>
+			<div class="common__inner inner3">
+				<div class="img">
+					<img src="./images/icon-luxury.svg" alt="">
+				</div>
+				<div class="title">
+					LUXURY
+				</div>
+				<div class="desc">
+					Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.
+				</div>
+				<div class="button">
+					<button>Learn More</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
+</html>
